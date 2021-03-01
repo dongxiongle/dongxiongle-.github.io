@@ -13,7 +13,7 @@ const work = () => {
   // ...
 };
 ```
-### main.ts
+### main.ts中创建worker
 ```typescript
 import CreateWorker from './createWorker';
 import work from './work';
