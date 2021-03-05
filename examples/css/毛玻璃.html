@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>毛玻璃</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Courier New', Courier, monospace sans-serif;
+    }
+    section {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-image: repeating-linear-gradient(to bottom, #000 0, #000 20px, #fff 20px, #fff 40px),
+      repeating-linear-gradient(to right, #000 0, #000 20px, #000 20px, #fff 40px);
+      overflow: hidden;
+    }
+    section h2 {
+      font-size: 5em;
+      color: #fff;
+      pointer-events: none;
+      text-shadow: 0 10px 20px rgba(0,0,0,.5);
+    }
+    section .glass {
+      position: absolute;
+      pointer-events: none;
+      width: 300px;
+      height: 200px;
+      box-shadow: 0 25px 50px rgba(0,0,0,.2);
+      background: transparent;
+      backdrop-filter: blur(10px);
+      transition: 0.5s;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h2>毛玻璃</h2>
+    <div class="glass"></div>
+  </section>
+</body>
+</html>
