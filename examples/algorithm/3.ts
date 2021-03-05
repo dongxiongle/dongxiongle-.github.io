@@ -3,18 +3,21 @@
  * @param arr number[]
  */
 function maxSum(arr: number[]) {
-  let temp = 0;
-  let max = 0;
-  arr.forEach((value: number) => {
-    if (value >= 0) {
-      temp += value;
-      max = max > temp ? max : temp;
+  let max = -Infinity;
+  let temp = arr[0];
+  const { length } = arr;
+  for(let i = 1; i < length; i++) {
+    if (Math.abs(arr[i] - arr[i - 1]) === 1) {
+      temp += arr[i];
     } else {
-      temp = 0;
+      temp = arr[i];
     }
-  });
+    max = Math.max(max, temp);
+  }
   return max;
 }
 
-const max = maxSum([1,2,4,5,7,-1,0,1,-9,-8,9]);
-console.log(max);
+const max = maxSum([9,10,11,12,13,3,25,4,1,47,6,7,8,5,14,15]);
+const max2 = maxSum([8,9,10,11,12,3,25,4,1,47,6,7,8,5,18,19,20]);
+console.log(max); // 55
+console.log(max2); // 57
