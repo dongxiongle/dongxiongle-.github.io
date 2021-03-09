@@ -10,5 +10,7 @@ export class Tree<T> implements TreeNode<T> {
   right: null;
   constructor(key: T) {
     this.key = key;
+    this.left = null;
+    this.right = null;
   }
 }

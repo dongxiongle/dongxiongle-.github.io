@@ -18,8 +18,8 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      background-image: repeating-linear-gradient(to bottom, #000 0, #000 20px, #fff 20px, #fff 40px),
-      repeating-linear-gradient(to right, #000 0, #000 20px, #000 20px, #fff 40px);
+      background-image: linear-gradient(to bottom, #000 1px, transparent 0), linear-gradient(to right, #000 1px, transparent 0);
+      background-size: 30px 30px;
       overflow: hidden;
     }
     section h2 {
@@ -33,9 +33,9 @@
       pointer-events: none;
       width: 300px;
       height: 200px;
-      box-shadow: 0 25px 50px rgba(0,0,0,.2);
+      box-shadow: 0 25px 50px rgba(0,0,0,.1);
       background: transparent;
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(2px);
       transition: 0.5s;
     }
   </style>
