@@ -135,7 +135,12 @@ class BinarySearchTree<T> {
   max() {
     return this.maxNode(this.root);
   }
-
+  /**
+   * 删除节点
+   * @param node 节点
+   * @param key 键
+   * @returns 节点
+   */
   removeNode(node: TreeNode<T> | null, key: T): TreeNode<T> | null {
     if (node === null) {
       return null;
