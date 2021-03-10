@@ -44,7 +44,7 @@ var person = obj;
 function _new (...args) {
   const obj = {};
   // 获取构造函数
-  const Constructor = Array.prototype.shift.apply(args);
+  const Constructor = Array.prototype.shift.apply(null, args);
   // 链接到另一个对象，把obj的__proto__指向构造函数的原型
   obj.__proto__ = Constructor.prototype;
  // 将obj作为this的上下文，并获取返回值
