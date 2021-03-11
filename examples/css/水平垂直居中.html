@@ -6,9 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>水平垂直居中</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
     .flexWrap {
-      width: 200px;
-      height: 100px;
+      padding: 10px;
+      width: 280px;
+      height: 80px;
       background: rgb(156, 189, 156);
       border-radius: 6px;
     }
@@ -20,16 +25,19 @@
     }
     .flexWrap {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
     }
-    /* .flexItem {
-      margin: auto;
-    } */
+    .flexItem {
+      width: calc((100% - 30px) / 4);
+    }
   </style>
 </head>
 <body>
   <div class="flexWrap">
+    <div class="flexItem"></div>
+    <div class="flexItem"></div>
+    <div class="flexItem"></div>
     <div class="flexItem"></div>
   </div>
 </body>
