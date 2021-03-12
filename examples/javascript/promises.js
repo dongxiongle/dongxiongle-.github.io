@@ -29,7 +29,6 @@ Function.prototype._apply = function (context, args = []) {
 // console.log(b);
 
 Function.prototype._bind = function (context, ...bindArgs) {
-  context = (typeof context === 'object' && context !== null) ? context : window;
   return (...args) => {
     this.call(context, ...bindArgs, ...args);
   };
