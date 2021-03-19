@@ -29,7 +29,9 @@ Function.prototype._apply = function (context, args = []) {
 // console.log(b);
 
 Function.prototype._bind = function (context, ...bindArgs) {
+  console.log(bindArgs);
   return (...args) => {
+    console.log(args);
     this.call(context, ...bindArgs, ...args);
   };
 };
@@ -41,5 +43,4 @@ var list1 = list(1, 2, 3);
 var leadingThirtysevenList = list._bind(null, 37);
 var list2 = leadingThirtysevenList();
 var list3 = leadingThirtysevenList(1, 2, 3);
-console.log(list1);
-console.log(list3);
+console.log(list2);
