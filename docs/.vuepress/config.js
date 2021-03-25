@@ -3,6 +3,7 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/img/favicon.ico'}]
   ],
+  dest: 'public',
   markdown: {
     lineNumbers: true // 代码块显示行号
   },
