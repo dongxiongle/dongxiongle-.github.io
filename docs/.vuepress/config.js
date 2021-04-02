@@ -31,6 +31,9 @@ module.exports = {
       '/react': [
         ['/react/init', '搭建react+ts+webpack项目'],
         ['/react/hooks', 'react hooks']
+      ],
+      '/algorithm/': [
+        ['/algorithm/排序算法', '排序算法']
       ]
     }
   }
