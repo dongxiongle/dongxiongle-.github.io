@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>纯CSS导航栏下划线跟随效果</title>
+  <style>
+    li{
+      list-style: none;
+      float: left;
+      padding: 20px;
+      position: relative;
+      cursor: pointer;
+    }
+    li::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 0;
+      height: 100%;
+      border-bottom: 2px solid #000;
+      transition: all 0.3s linear;
+    }
+    li:hover::before {
+      width: 100%;
+      left: 0;
+    }
+    li:hover ~ li::before {
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>不可思议</li>
+    <li>难以置信</li>
+    <li>不可捉摸</li>
+    <li>好好想想</li>
+    <li>就能实现</li>
+  </ul>
+</body>
+</html>
