@@ -10,8 +10,8 @@ module.exports = {
   themeConfig: {
     sidebarDepth: 4, // 同时提取markdown中h2和h3标题，显示在侧边栏上
     lastUpdated: 'Last Updated', // 文档更新时间： 每个文件git最后提交时间
-    repo: 'https://github.com/dongxiongle/dongxiongle.github.io.git',
-    repoLabel: 'github',
+    // repo: 'https://github.com/dongxiongle/dongxiongle.github.io.git',
+    // repoLabel: 'github',
     // 顶部导航栏
     nav: [
       { text: 'css', link: '/CSS/' },
