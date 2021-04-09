@@ -1,30 +1,22 @@
-function binarySearch9<T>(arr: T[], value: T) {
-  const sortArr = arr;
-  const start = 0;
-  const end = sortArr.length - 1;
-  return binarySearchRecursive(sortArr, value, start, end);
-}
-function binarySearchRecursive<T>(
-  arr: T[],
-  value: T,
-  start: number,
-  end: number
-): Function | number {
-  if (start <= end) {
-    const middle = Math.floor((start + end) / 2);
-    const element = arr[middle];
-    if (element < value) {
-      return binarySearchRecursive(arr, value, middle + 1, end);
-    } else if (element > value) {
-      return binarySearchRecursive(arr, value, start, middle - 1);
+const lengthOfLongestSubstring = function(s: string) {
+  const length = s.length;
+  let max = 0;
+  let tep = 0;
+  let current = '';
+  for (let i = 0; i < length; i++) {
+    const index = current.indexOf(s[i]);
+    if (index == -1) {
+      current += s[i];
+      tep++;
     } else {
-      return middle;
+      current = current.substring(index+1) + s[i];
+      console.log(current);
+      tep = current.length;
     }
+    max = Math.max(max, tep);
   }
-  return -1;
-}
+  return max;
+};
 
-console.log(binarySearch9([1, 2, 3, 4, 5, 6], 6));
-console.log(binarySearch9([1, 2, 3, 4, 5, 6], 1));
-console.log(binarySearch9([1, 2, 3, 4, 5, 6], 4));
-console.log(binarySearch9([1, 2, 3, 4, 5, 6], 7));
+console.log(lengthOfLongestSubstring('dvdf'));
+console.log(lengthOfLongestSubstring('aabaab!bb'));
