@@ -37,12 +37,16 @@
       padding: 20px;
       background: rgb(156, 189, 156);
       border-radius: 6px;
-      grid-template-rows: 50px 50px 50px 50px;
-      grid-template-columns: 50px auto 50px;
+      /* grid-template-rows: repeat(5, 50px); */
+      grid-template-columns: 1fr 1fr minmax(100px, 1fr)
     }
     .gridItem {
+      height: 50px;
       border-radius: 4px;
       background: rgb(204, 76, 216);
+    }
+    .gridItem:nth-child(2n+1) {
+      background-color: aquamarine;
     }
   </style>
 </head>
