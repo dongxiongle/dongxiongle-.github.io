@@ -9,3 +9,5 @@
 - Fragment
 - Profiler
 - StrictMode
+#### Component
+> 

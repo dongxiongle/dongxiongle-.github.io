@@ -4,29 +4,37 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>intersectionObserver</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 20px;
+      background-color: aquamarine;
+      border-radius: 6px;
+    }
+  </style>
 </head>
 <body>
-  <ul>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-    <li>6</li>
-    <li>7</li>
-  </ul>
-  <script>
-    const lis = document.querySelectorAll('li');
-    for(var i = 0; i < lis.length; i++) {
-      (function(j) {
-        console.log(j);
-        lis[i].onclick = function() {
-          console.log(j);
-        }
-      })(i);
-    }
-    const aaa = Array.prototype.shift.apply([1,2,3,4]);
-    console.log(aaa);
-    console.log([1,2,3,4].splice());
-  </script>
+  <div id="id4">1</div>
+  <div id="id5">2</div>
+  <div id="id6">3</div>
+  <div id="id7">4</div>
+  <div id="id8">5</div>
+  <div id="id9">6</div>
+  <div id="id10">7</div>
+  <div id="id11">8</div>
+  <div id="id12">9</div>
+  <div id="id13">10</div>
 </body>
+<script>
+  const cb = (enteies) => {
+    console.log(enteies);
+  }
+  const io = new IntersectionObserver(cb);
+  const ele1 = document.getElementById('id9');
+  const ele2 = document.getElementById('id10');
+  io.observe(ele1);
+  io.observe(ele2);
+</script>
 </html>
